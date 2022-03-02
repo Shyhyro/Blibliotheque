@@ -8,7 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-
     #[Route('/', name: 'Home', methods: ['GET'])]
     public function home() : Response
     {
