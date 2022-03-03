@@ -5,10 +5,12 @@
     {% for book in books %}
         <div class="card">
             <img class="card_img" src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" alt="placeholder">
-            <button type="button" data-id="{{ book.id }}">Take</button>
+            <a href="#"><button type="button" data-id="{{ book.id }}">Take</button></a>
             <div class="card_text">
                 <h2>{{ book.name }}</h2>
-                <div>{{ book.disponibility }}</div>
+                <div>
+                    {{ book.disponibility }}
+                </div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Aliquam amet dicta distinctio dolorum eius enim expedita iste laboriosam,

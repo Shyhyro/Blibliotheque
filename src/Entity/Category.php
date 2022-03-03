@@ -29,6 +29,12 @@ class Category
         $this->disponibility = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        // Je choisis de représenter une Category sous forme de string par son nom
+        return $this->getName();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

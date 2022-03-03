@@ -5,17 +5,29 @@
 }
 
 body {
+    padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
-    padding: 25px;
     font-family: "Trebuchet MS", sans-serif;
-    font-size: 62.5%;
+    font-size: 16px;
+}
+
+header {
+    padding: 0 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: lightblue;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .card {
     margin: 25px;
     width: 300px;
-    height: 400px;
+    min-height: 400px;
 }
 
 .card:nth-child(even){
