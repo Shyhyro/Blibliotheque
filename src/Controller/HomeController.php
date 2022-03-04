@@ -11,15 +11,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'Home', methods: ['GET'])]
-    public function home(EntityManagerInterface $em) : Response
+    public function home(EntityManagerInterface $em, TranslatorInterface $translator) : Response
     {
         $book = $em->getRepository(Book::class)->findAll();
         $category = (new Category());
         $rack = (new Rack());
+
+
         return $this->render("./home/home.html.twig", [
             'books' => $book,
         ]);
